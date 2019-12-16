@@ -2,7 +2,7 @@
 
 ![SMB](readme_media/logo.png)
 
-**FIDG** is a C++ program for organizing your school life.
+**FIDG** is a C++ program for generating random identities.
 
 ## Installation
 
