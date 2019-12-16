@@ -1,7 +1,8 @@
 # Fake Identity Generator
 
-**FIDG** is a C++ program for organizing your school life.
+![SMB](readme_media/logo.png)
 
+**FIDG** is a C++ program for organizing your school life.
 
 ## Installation
 
