@@ -15,7 +15,7 @@ git clone https://github.com/Zeverotti/FIDG/
 
 Launch the binary from your terminal.
 ```bash
-./fake-id
+./fidg
 ```
 
 ## Contributing
