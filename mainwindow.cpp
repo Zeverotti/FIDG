@@ -1,0 +1,33 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <vector>
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    std::vector<std::string> First_names; std::vector<std::string> Last_names;
+    First_names.push_back("Thanos"); First_names.push_back("Shrek");
+    Last_names.push_back("Tyrell"); Last_names.push_back("Wellick");
+    Identity random_identity;
+    random_identity.generate_identity(First_names, Last_names);
+
+    QString qstr_first_name = QString::fromStdString(random_identity.first_name);
+    ui->label_14->setText(qstr_first_name);
+    QString qstr_last_name = QString::fromStdString(random_identity.last_name);
+    ui->label_15->setText(qstr_last_name);
+    QString qstr_birthday = QString::fromStdString(random_identity.birthday);
+    ui->label_16->setText(qstr_birthday);
+    QString qstr_age = QString::fromStdString(random_identity.age);
+    ui->label_17->setText(qstr_age);
+}
