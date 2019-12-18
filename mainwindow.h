@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <iostream>
+#include <fstream>
 
 namespace Ui {
 class MainWindow;
@@ -34,7 +35,23 @@ class Identity : public QMainWindow {
         std::string phone_number;
         std::string age;
 
-        void generate_identity(std::vector<std::string> all_names, std::vector<std::string> first_names){
+        void generate_identity(){
+            std::vector<std::string> all_names;
+            std::ifstream file("dataset/male_first_names.txt");
+            std::string str;
+            while(std::getline(file, str)){
+                all_names.push_back(str);
+            }
+            file.close();
+            std::ifstream file2("dataset/last_names.txt");
+
+            std::string str2;
+            std::vector<std::string> first_names;
+            while(std::getline(file2, str2)){
+                first_names.push_back(str2);
+            }
+            file2.close();
+
             srand (time(NULL));
             int random_name = rand()% all_names.size();
             int random_day = rand()% 31 + 1;

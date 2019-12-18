@@ -221,8 +221,9 @@
          <font>
           <family>Manjari</family>
           <pointsize>13</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -231,7 +232,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="label_18">
         <property name="font">
          <font>
           <family>Manjari</family>
@@ -241,7 +242,38 @@
          </font>
         </property>
         <property name="text">
+         <string>phone.txt</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Manjari</family>
+          <pointsize>13</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
          <string>Country N:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_19">
+        <property name="font">
+         <font>
+          <family>Manjari</family>
+          <pointsize>13</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>countryn.txt</string>
         </property>
        </widget>
       </item>

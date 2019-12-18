@@ -32,3 +32,7 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+
+DISTFILES += \
+    dataset/country_code.txt
