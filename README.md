@@ -14,9 +14,9 @@ git clone https://github.com/Zeverotti/FIDG/
 
 ## Usage
 
-Launch the binary from your terminal.
+Launch the binary in _build-FIDG-Desktop-Debug_ from your terminal.
 ```bash
-./fidg
+./FIDG
 ```
 
 ## Contributing
