@@ -18,7 +18,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_pressed();
 
 private:
     Ui::MainWindow *ui;
@@ -34,6 +34,7 @@ class Identity : public QMainWindow {
         std::string birthday;
         std::string phone_number;
         std::string age;
+        std::string country_code;
 
         void generate_identity(){
             std::vector<std::string> all_names;
@@ -63,6 +64,15 @@ class Identity : public QMainWindow {
                 random_phone_num = random_phone_num + std::to_string(random_num);
             }
 
+            std::vector<std::string> country_codes;
+            std::ifstream file3("dataset/country_code.txt");
+            std::string str3;
+            while(std::getline(file3, str3)){
+                country_codes.push_back(str3);
+            }
+            file3.close();
+            int random_country_code = rand()% country_codes.size();
+
             first_name = first_names[random_name];
             last_name = all_names[random_name];
             day = random_day;
@@ -82,6 +92,7 @@ class Identity : public QMainWindow {
             birthday = gen_birthday;
             phone_number = random_phone_num;
             age = std::to_string(2019 - random_year);
+            country_code = country_codes[random_country_code];
         }
 };
 

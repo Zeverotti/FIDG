@@ -14,7 +14,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_pressed()
 {
     Identity random_identity;
     random_identity.generate_identity();
@@ -29,4 +29,6 @@ void MainWindow::on_pushButton_clicked()
     ui->label_17->setText(qstr_age);
     QString qstr_phone_number = QString::fromStdString(random_identity.phone_number);
     ui->label_18->setText(qstr_phone_number);
+    QString qstr_country_code = QString::fromStdString(random_identity.country_code);
+    ui->label_19->setText(qstr_country_code);
 }
