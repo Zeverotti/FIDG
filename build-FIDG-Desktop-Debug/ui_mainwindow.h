@@ -52,7 +52,9 @@ public:
     QLabel *label_8;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_10;
+    QLabel *label_20;
     QLabel *label_11;
+    QLabel *label_21;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_12;
     QLabel *label_13;
@@ -229,15 +231,33 @@ public:
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         label_10 = new QLabel(centralwidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setFont(font3);
+        label_10->setFont(font4);
 
         horizontalLayout_7->addWidget(label_10);
 
+        label_20 = new QLabel(centralwidget);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Manjari"));
+        font5.setPointSize(13);
+        font5.setBold(true);
+        font5.setItalic(true);
+        font5.setWeight(75);
+        label_20->setFont(font5);
+
+        horizontalLayout_7->addWidget(label_20);
+
         label_11 = new QLabel(centralwidget);
         label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setFont(font3);
+        label_11->setFont(font4);
 
         horizontalLayout_7->addWidget(label_11);
+
+        label_21 = new QLabel(centralwidget);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setFont(font3);
+
+        horizontalLayout_7->addWidget(label_21);
 
 
         verticalLayout->addLayout(horizontalLayout_7);
@@ -273,11 +293,11 @@ public:
 
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QFont font5;
-        font5.setBold(true);
-        font5.setItalic(false);
-        font5.setWeight(75);
-        pushButton->setFont(font5);
+        QFont font6;
+        font6.setBold(true);
+        font6.setItalic(false);
+        font6.setWeight(75);
+        pushButton->setFont(font6);
 
         horizontalLayout->addWidget(pushButton);
 
@@ -313,7 +333,9 @@ public:
         label_9->setText(QApplication::translate("MainWindow", "CVV:", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindow", "Credit N:", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("MainWindow", "Email:", 0, QApplication::UnicodeUTF8));
+        label_20->setText(QApplication::translate("MainWindow", "email.txt", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("MainWindow", "Password:", 0, QApplication::UnicodeUTF8));
+        label_21->setText(QApplication::translate("MainWindow", "password.txt", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindow", "Car:", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("MainWindow", "Address:", 0, QApplication::UnicodeUTF8));
         radioButton->setText(QApplication::translate("MainWindow", " Male", 0, QApplication::UnicodeUTF8));

@@ -35,6 +35,7 @@ class Identity : public QMainWindow {
         std::string phone_number;
         std::string age;
         std::string country_code;
+        std::string email;
 
         void generate_identity(){
             std::vector<std::string> all_names;
@@ -53,6 +54,14 @@ class Identity : public QMainWindow {
             }
             file2.close();
 
+            std::ifstream file4("dataset/emails.txt");
+            std::string str4;
+            std::vector<std::string> random_emails;
+            while(std::getline(file4, str4)){
+                random_emails.push_back(str4);
+            }
+            file4.close();
+
             srand (time(NULL));
             int random_name = rand()% all_names.size();
             int random_day = rand()% 31 + 1;
@@ -63,6 +72,7 @@ class Identity : public QMainWindow {
                 int random_num = rand()% 9;
                 random_phone_num = random_phone_num + std::to_string(random_num);
             }
+            int rand_email = rand()% random_emails.size();
 
             std::vector<std::string> country_codes;
             std::ifstream file3("dataset/country_code.txt");
@@ -93,6 +103,7 @@ class Identity : public QMainWindow {
             phone_number = random_phone_num;
             age = std::to_string(2019 - random_year);
             country_code = country_codes[random_country_code];
+            email = random_emails[rand_email];
         }
 };
 
