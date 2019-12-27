@@ -56,8 +56,10 @@ public:
     QLabel *label_11;
     QLabel *label_21;
     QHBoxLayout *horizontalLayout_8;
+    QLabel *label_22;
     QLabel *label_12;
     QLabel *label_13;
+    QLabel *label_23;
     QHBoxLayout *horizontalLayout;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
@@ -264,6 +266,12 @@ public:
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        label_22 = new QLabel(centralwidget);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setFont(font4);
+
+        horizontalLayout_8->addWidget(label_22);
+
         label_12 = new QLabel(centralwidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         label_12->setFont(font3);
@@ -272,9 +280,15 @@ public:
 
         label_13 = new QLabel(centralwidget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setFont(font3);
+        label_13->setFont(font4);
 
         horizontalLayout_8->addWidget(label_13);
+
+        label_23 = new QLabel(centralwidget);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setFont(font3);
+
+        horizontalLayout_8->addWidget(label_23);
 
 
         verticalLayout->addLayout(horizontalLayout_8);
@@ -336,8 +350,10 @@ public:
         label_20->setText(QApplication::translate("MainWindow", "email.txt", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("MainWindow", "Password:", 0, QApplication::UnicodeUTF8));
         label_21->setText(QApplication::translate("MainWindow", "password.txt", 0, QApplication::UnicodeUTF8));
-        label_12->setText(QApplication::translate("MainWindow", "Car:", 0, QApplication::UnicodeUTF8));
+        label_22->setText(QApplication::translate("MainWindow", "Car:", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("MainWindow", "car.txt", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("MainWindow", "Address:", 0, QApplication::UnicodeUTF8));
+        label_23->setText(QApplication::translate("MainWindow", "address.txt", 0, QApplication::UnicodeUTF8));
         radioButton->setText(QApplication::translate("MainWindow", " Male", 0, QApplication::UnicodeUTF8));
         radioButton_2->setText(QApplication::translate("MainWindow", " Female", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("MainWindow", "GENERATE", 0, QApplication::UnicodeUTF8));

@@ -33,4 +33,6 @@ void MainWindow::on_pushButton_pressed()
     ui->label_19->setText(qstr_country_code);
     QString qstr_email = QString::fromStdString(random_identity.email);
     ui->label_20->setText(qstr_email);
+    QString qstr_car = QString::fromStdString(random_identity.car);
+    ui->label_12->setText(qstr_car);
 }

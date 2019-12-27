@@ -36,6 +36,7 @@ class Identity : public QMainWindow {
         std::string age;
         std::string country_code;
         std::string email;
+        std::string car;
 
         void generate_identity(){
             std::vector<std::string> all_names;
@@ -83,6 +84,15 @@ class Identity : public QMainWindow {
             file3.close();
             int random_country_code = rand()% country_codes.size();
 
+            std::vector<std::string> random_cars;
+            std::ifstream file5("dataset/cars.txt");
+            std::string str5;
+            while(std::getline(file5, str5)){
+                random_cars.push_back(str5);
+            }
+            file5.close();
+            int random_car = rand()% random_cars.size();
+
             first_name = first_names[random_name];
             last_name = all_names[random_name];
             day = random_day;
@@ -104,6 +114,7 @@ class Identity : public QMainWindow {
             age = std::to_string(2019 - random_year);
             country_code = country_codes[random_country_code];
             email = random_emails[rand_email];
+            car = random_cars[random_car];
         }
 };
 

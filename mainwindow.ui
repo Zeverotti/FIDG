@@ -383,6 +383,22 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
+       <widget class="QLabel" name="label_22">
+        <property name="font">
+         <font>
+          <family>Manjari</family>
+          <pointsize>13</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Car:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="label_12">
         <property name="font">
          <font>
@@ -393,7 +409,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Car:</string>
+         <string>car.txt</string>
         </property>
        </widget>
       </item>
@@ -403,12 +419,28 @@
          <font>
           <family>Manjari</family>
           <pointsize>13</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Address:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_23">
+        <property name="font">
+         <font>
+          <family>Manjari</family>
+          <pointsize>13</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>Address:</string>
+         <string>address.txt</string>
         </property>
        </widget>
       </item>
