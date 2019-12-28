@@ -35,4 +35,6 @@ void MainWindow::on_pushButton_pressed()
     ui->label_20->setText(qstr_email);
     QString qstr_car = QString::fromStdString(random_identity.car);
     ui->label_12->setText(qstr_car);
+    QString qstr_password = QString::fromStdString(random_identity.password);
+    ui->label_21->setText(qstr_password);
 }

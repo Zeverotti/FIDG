@@ -317,6 +317,12 @@
      <layout class="QHBoxLayout" name="horizontalLayout_7">
       <item>
        <widget class="QLabel" name="label_10">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Manjari</family>
@@ -336,7 +342,7 @@
         <property name="font">
          <font>
           <family>Manjari</family>
-          <pointsize>13</pointsize>
+          <pointsize>8</pointsize>
           <weight>75</weight>
           <italic>true</italic>
           <bold>true</bold>

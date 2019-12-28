@@ -233,6 +233,7 @@ public:
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         label_10 = new QLabel(centralwidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setMaximumSize(QSize(50, 16777215));
         label_10->setFont(font4);
 
         horizontalLayout_7->addWidget(label_10);
@@ -241,7 +242,7 @@ public:
         label_20->setObjectName(QString::fromUtf8("label_20"));
         QFont font5;
         font5.setFamily(QString::fromUtf8("Manjari"));
-        font5.setPointSize(13);
+        font5.setPointSize(8);
         font5.setBold(true);
         font5.setItalic(true);
         font5.setWeight(75);

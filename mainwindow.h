@@ -37,6 +37,7 @@ class Identity : public QMainWindow {
         std::string country_code;
         std::string email;
         std::string car;
+        std::string password;
 
         void generate_identity(){
             std::vector<std::string> all_names;
@@ -115,6 +116,17 @@ class Identity : public QMainWindow {
             country_code = country_codes[random_country_code];
             email = random_emails[rand_email];
             car = random_cars[random_car];
+
+            std::vector<std::string> random_passwords;
+            std::ifstream file6("dataset/passwords.txt");
+            std::string str6;
+            while(std::getline(file6, str6)){
+                random_passwords.push_back(str6);
+            }
+            file6.close();
+            int random_password = rand()% random_passwords.size();
+
+            password = random_passwords[random_password];
         }
 };
 
