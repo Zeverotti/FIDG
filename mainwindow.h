@@ -39,33 +39,55 @@ class Identity : public QMainWindow {
         std::string car;
         std::string password;
 
-        void generate_identity(){
-            std::vector<std::string> all_names;
-            std::ifstream file("dataset/male_first_names.txt");
+        std::vector<std::string> generate_vector(std::string filename){
+            std::vector<std::string> gen_vector;
+            std::ifstream file(filename);
             std::string str;
             while(std::getline(file, str)){
-                all_names.push_back(str);
+                gen_vector.push_back(str);
             }
             file.close();
-            std::ifstream file2("dataset/last_names.txt");
+            return gen_vector;
+        }
 
-            std::string str2;
+        std::string generate_birthday(int day, int month, int year){
+            std::string gen_birthday;
+            std::vector<int> gen_birthday_vec;
+            gen_birthday_vec.push_back(day); gen_birthday_vec.push_back(month); gen_birthday_vec.push_back(year);
+            for(int i=0; i<3; i++){
+                gen_birthday = gen_birthday + std::to_string(gen_birthday_vec[i]);
+                if(i==2){
+                    gen_birthday = gen_birthday + "";
+                }
+                else{
+                    gen_birthday = gen_birthday + "/";
+                }
+            }
+            return gen_birthday;
+        }
+
+        void generate_identity(){
+            std::vector<std::string> all_names;
+            all_names = generate_vector("dataset/male_first_names.txt");
             std::vector<std::string> first_names;
-            while(std::getline(file2, str2)){
-                first_names.push_back(str2);
-            }
-            file2.close();
-
-            std::ifstream file4("dataset/emails.txt");
-            std::string str4;
+            first_names = generate_vector("dataset/last_names.txt");
+            std::vector<std::string> country_codes;
+            country_codes = generate_vector("dataset/country_code.txt");
             std::vector<std::string> random_emails;
-            while(std::getline(file4, str4)){
-                random_emails.push_back(str4);
-            }
-            file4.close();
+            random_emails = generate_vector("dataset/emails.txt");
+            std::vector<std::string> random_cars;
+            random_cars = generate_vector("dataset/cars.txt");
+            std::vector<std::string> random_passwords;
+            random_passwords = generate_vector("dataset/passwords.txt");
 
             srand (time(NULL));
-            int random_name = rand()% all_names.size();
+
+            int random_first_name = rand()% all_names.size();
+            first_name = first_names[random_first_name];
+
+            int random_last_name = rand()% first_names.size();
+            last_name = all_names[random_first_name];
+
             int random_day = rand()% 31 + 1;
             int random_month = rand()% 12 + 1;
             int random_year = rand()% 51 + 1950;
@@ -76,54 +98,22 @@ class Identity : public QMainWindow {
             }
             int rand_email = rand()% random_emails.size();
 
-            std::vector<std::string> country_codes;
-            std::ifstream file3("dataset/country_code.txt");
-            std::string str3;
-            while(std::getline(file3, str3)){
-                country_codes.push_back(str3);
-            }
-            file3.close();
             int random_country_code = rand()% country_codes.size();
 
-            std::vector<std::string> random_cars;
-            std::ifstream file5("dataset/cars.txt");
-            std::string str5;
-            while(std::getline(file5, str5)){
-                random_cars.push_back(str5);
-            }
-            file5.close();
             int random_car = rand()% random_cars.size();
 
-            first_name = first_names[random_name];
-            last_name = all_names[random_name];
             day = random_day;
             month = random_month;
             year = random_year;
-            std::string gen_birthday;
-            std::vector<int> gen_birthday_vec; gen_birthday_vec.push_back(day); gen_birthday_vec.push_back(month); gen_birthday_vec.push_back(year);
-            for(int i=0; i<3; i++){
-                gen_birthday = gen_birthday + std::to_string(gen_birthday_vec[i]);
-                if(i==2){
-                    gen_birthday = gen_birthday + "";
-                }
-                else{
-                    gen_birthday = gen_birthday + "/";
-                }
-            }
-            birthday = gen_birthday;
+
+            birthday = generate_birthday(day, month, year);
+
             phone_number = random_phone_num;
             age = std::to_string(2019 - random_year);
             country_code = country_codes[random_country_code];
             email = random_emails[rand_email];
             car = random_cars[random_car];
 
-            std::vector<std::string> random_passwords;
-            std::ifstream file6("dataset/passwords.txt");
-            std::string str6;
-            while(std::getline(file6, str6)){
-                random_passwords.push_back(str6);
-            }
-            file6.close();
             int random_password = rand()% random_passwords.size();
 
             password = random_passwords[random_password];
