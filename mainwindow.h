@@ -66,9 +66,24 @@ class Identity : public QMainWindow {
             return gen_birthday;
         }
 
-        void generate_identity(){
+        void generate_identity(std::string gender){
             std::vector<std::string> all_names;
-            all_names = generate_vector("dataset/male_first_names.txt");
+            if(gender == "male"){
+                all_names = generate_vector("dataset/male_first_names.txt");
+            }
+            else if(gender == "female"){
+                all_names = generate_vector("dataset/female_first_names.txt");
+            }
+            else{
+                srand (time(NULL));
+                int random_number = rand()% 2;
+                if(random_number == 0){
+                    all_names = generate_vector("dataset/male_first_names.txt");
+                }
+                else{
+                    all_names = generate_vector("dataset/female_first_names.txt");
+                }
+            }
             std::vector<std::string> first_names;
             first_names = generate_vector("dataset/last_names.txt");
             std::vector<std::string> country_codes;

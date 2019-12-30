@@ -18,8 +18,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_pressed()
 {
+    std::string gender;
+
+    if(ui->radioButton->isChecked()==true){
+        gender = "male";
+    }
+    else if(ui->radioButton_2->isChecked()==true){
+        gender = "female";
+    }
+
     Identity random_identity;
-    random_identity.generate_identity();
+    random_identity.generate_identity(gender);
 
     QString qstr_first_name = QString::fromStdString(random_identity.first_name);
     ui->label_14->setText(qstr_first_name);
