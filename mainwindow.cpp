@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->label_8->hide();
+    ui->label_9->hide();
 }
 
 MainWindow::~MainWindow()

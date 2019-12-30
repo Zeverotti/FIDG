@@ -51,15 +51,13 @@ public:
     QLabel *label_9;
     QLabel *label_8;
     QHBoxLayout *horizontalLayout_7;
-    QLabel *label_10;
-    QLabel *label_20;
+    QLabel *label_22;
+    QLabel *label_12;
     QLabel *label_11;
     QLabel *label_21;
     QHBoxLayout *horizontalLayout_8;
-    QLabel *label_22;
-    QLabel *label_12;
-    QLabel *label_13;
-    QLabel *label_23;
+    QLabel *label_10;
+    QLabel *label_20;
     QHBoxLayout *horizontalLayout;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
@@ -231,33 +229,28 @@ public:
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        label_10 = new QLabel(centralwidget);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setMaximumSize(QSize(50, 16777215));
-        label_10->setFont(font4);
+        label_22 = new QLabel(centralwidget);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setFont(font4);
 
-        horizontalLayout_7->addWidget(label_10);
+        horizontalLayout_7->addWidget(label_22);
 
-        label_20 = new QLabel(centralwidget);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        QFont font5;
-        font5.setFamily(QString::fromUtf8("Manjari"));
-        font5.setPointSize(8);
-        font5.setBold(true);
-        font5.setItalic(true);
-        font5.setWeight(75);
-        label_20->setFont(font5);
+        label_12 = new QLabel(centralwidget);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setFont(font3);
 
-        horizontalLayout_7->addWidget(label_20);
+        horizontalLayout_7->addWidget(label_12);
 
         label_11 = new QLabel(centralwidget);
         label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setMaximumSize(QSize(117, 16777215));
         label_11->setFont(font4);
 
         horizontalLayout_7->addWidget(label_11);
 
         label_21 = new QLabel(centralwidget);
         label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setMaximumSize(QSize(115, 16777215));
         label_21->setFont(font3);
 
         horizontalLayout_7->addWidget(label_21);
@@ -267,29 +260,24 @@ public:
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        label_22 = new QLabel(centralwidget);
-        label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setFont(font4);
+        label_10 = new QLabel(centralwidget);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setMaximumSize(QSize(115, 16777215));
+        label_10->setFont(font4);
 
-        horizontalLayout_8->addWidget(label_22);
+        horizontalLayout_8->addWidget(label_10);
 
-        label_12 = new QLabel(centralwidget);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font3);
+        label_20 = new QLabel(centralwidget);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Manjari"));
+        font5.setPointSize(13);
+        font5.setBold(true);
+        font5.setItalic(true);
+        font5.setWeight(75);
+        label_20->setFont(font5);
 
-        horizontalLayout_8->addWidget(label_12);
-
-        label_13 = new QLabel(centralwidget);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setFont(font4);
-
-        horizontalLayout_8->addWidget(label_13);
-
-        label_23 = new QLabel(centralwidget);
-        label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setFont(font3);
-
-        horizontalLayout_8->addWidget(label_23);
+        horizontalLayout_8->addWidget(label_20);
 
 
         verticalLayout->addLayout(horizontalLayout_8);
@@ -331,7 +319,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "FIDG", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "FAKE ID GENERETOR", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "First Name:", 0, QApplication::UnicodeUTF8));
         label_14->setText(QApplication::translate("MainWindow", "first.txt", 0, QApplication::UnicodeUTF8));
@@ -347,14 +335,12 @@ public:
         label_19->setText(QApplication::translate("MainWindow", "countryn.txt", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("MainWindow", "CVV:", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindow", "Credit N:", 0, QApplication::UnicodeUTF8));
-        label_10->setText(QApplication::translate("MainWindow", "Email:", 0, QApplication::UnicodeUTF8));
-        label_20->setText(QApplication::translate("MainWindow", "email.txt", 0, QApplication::UnicodeUTF8));
-        label_11->setText(QApplication::translate("MainWindow", "Password:", 0, QApplication::UnicodeUTF8));
-        label_21->setText(QApplication::translate("MainWindow", "password.txt", 0, QApplication::UnicodeUTF8));
         label_22->setText(QApplication::translate("MainWindow", "Car:", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindow", "car.txt", 0, QApplication::UnicodeUTF8));
-        label_13->setText(QApplication::translate("MainWindow", "Address:", 0, QApplication::UnicodeUTF8));
-        label_23->setText(QApplication::translate("MainWindow", "address.txt", 0, QApplication::UnicodeUTF8));
+        label_11->setText(QApplication::translate("MainWindow", "Password:", 0, QApplication::UnicodeUTF8));
+        label_21->setText(QApplication::translate("MainWindow", "password.txt", 0, QApplication::UnicodeUTF8));
+        label_10->setText(QApplication::translate("MainWindow", "Email:", 0, QApplication::UnicodeUTF8));
+        label_20->setText(QApplication::translate("MainWindow", "email.txt", 0, QApplication::UnicodeUTF8));
         radioButton->setText(QApplication::translate("MainWindow", " Male", 0, QApplication::UnicodeUTF8));
         radioButton_2->setText(QApplication::translate("MainWindow", " Female", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("MainWindow", "GENERATE", 0, QApplication::UnicodeUTF8));
